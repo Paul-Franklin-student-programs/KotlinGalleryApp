@@ -18,6 +18,17 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
 }
 
 dependencies {
@@ -26,4 +37,7 @@ dependencies {
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.recyclerview:recyclerview:1.3.1")
     implementation("io.coil-kt:coil:2.2.2")
+    implementation(libs.androidx.monitor)
+    implementation(libs.androidx.junit.ktx)
 }
+
